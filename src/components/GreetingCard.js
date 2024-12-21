@@ -11,9 +11,9 @@ const greetings = [
 ];
 
 const giftMessages = [
-  "I may not have a physical gift to offer, but here's a little surprise that comes straight from the heart — hope you love it!",
+  "I may not have a physical gift to you this Christmas, but here's a little surprise that comes straight from the heart — Hope you love it!",
   "Though I don't have a tangible gift, this small surprise is wrapped with love and a whole lot of thought. I hope you like it!",
-  "I might not have wrapped up any physical shiny gift, but here's something I have made — this little surprise that comes from the heart. hope you love it!"
+  "I might not have wrapped up any shiny gift, but here's something I have made — this little surprise that comes from the heart. Hope you love it!"
 ];
 
 const GreetingCard = ({ isOpen, onClose, receiverName }) => {
