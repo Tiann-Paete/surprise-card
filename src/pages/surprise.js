@@ -14,7 +14,6 @@ const Surprise = () => {
   const [showGreetingModal, setShowGreetingModal] = useState(false);
   const [showSanta, setShowSanta] = useState(false);
 
-  
   const handleBoxClick = () => {
     if (!isOpen) {
       setIsShaking(true);
@@ -22,7 +21,6 @@ const Surprise = () => {
         setIsShaking(false);
         setTimeout(() => {
           setIsOpen(true);
-          // Add small delay before Santa appears
           setTimeout(() => {
             setShowSanta(true);
           }, 50);
@@ -35,7 +33,6 @@ const Surprise = () => {
     setShowGreetingModal(true);
   };
 
-  // Memoize stars and snowflakes so they don't re-render
   const stars = useMemo(() => 
     Array.from({ length: 100 }).map((_, index) => ({
       id: `star-${index}`,
@@ -61,9 +58,8 @@ const Surprise = () => {
   
   return (
     <div className="relative w-full h-screen flex items-center justify-center overflow-hidden">
-      {/* Night sky background with multiple layers */}
+      {/* Background elements remain the same */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0a1128] via-[#1c2951] to-[#2a4177]">
-        {/* Stars container */}
         <div className="absolute inset-0">
           {stars.map(star => (
             <div
@@ -81,12 +77,9 @@ const Surprise = () => {
             />
           ))}
         </div>
-        
-        {/* Northern lights effect */}
         <div className="absolute inset-0 bg-gradient-to-t from-transparent via-emerald-900/5 to-transparent" />
       </div>
 
-      {/* Snow container */}
       <div className="absolute inset-0 pointer-events-none">
         {snowflakes.map(snowflake => (
           <div
@@ -102,33 +95,30 @@ const Surprise = () => {
         ))}
       </div>
       
-      {/* Moonlight glow overlay */}
       <div className="absolute inset-0 bg-blue-100/5" />
 
-      {/* Snow landscape with increased height */}
+      {/* Updated Snow landscape with responsive design */}
       <div className="absolute bottom-0 w-full">
-        {/* Snow hills with increased height */}
         <div className="relative w-full">
-          {/* Back hill - tallest */}
-          <div className="absolute bottom-0 w-full h-[20rem] bg-gradient-to-t from-white to-white/90 md:rounded-[30%] rounded-none transform scale-110 translate-y-40" />
+          {/* Back hill */}
+          <div className="absolute bottom-0 w-full bg-gradient-to-t from-white to-white/90 md:h-[20rem] h-[12rem] md:rounded-[30%] rounded-[50%] transform scale-110 md:translate-y-40 translate-y-20" />
           
           {/* Middle hill */}
-          <div className="absolute bottom-0 w-full h-[20rem] bg-gradient-to-t from-white to-white/95 md:rounded-[20%] rounded-none transform scale-105 translate-y-32" />
+          <div className="absolute bottom-0 w-full bg-gradient-to-t from-white to-white/95 md:h-[20rem] h-[10rem] md:rounded-[20%] rounded-[40%] transform scale-105 md:translate-y-32 translate-y-16" />
           
           {/* Front hill - main snow ground */}
-          <div className="absolute bottom-0 w-full h-96 bg-white md:rounded-[70%] rounded-none translate-y-24" />
+          <div className="absolute bottom-0 w-full md:h-96 h-48 bg-white md:rounded-[70%] rounded-[60%] md:translate-y-24 translate-y-12" />
           
           {/* Snow texture overlay */}
-          <div className="absolute bottom-0 w-full h-96 bg-gradient-to-b from-transparent to-blue-100/20 translate-y-24" />
+          <div className="absolute bottom-0 w-full md:h-96 h-48 bg-gradient-to-b from-transparent to-blue-100/20 md:translate-y-24 translate-y-12" />
         </div>
       </div>
       
-        {/* Gift box container */}
-        <div 
-        className="relative w-72 h-72 cursor-pointer -mb-40"
+      {/* Gift box container */}
+      <div 
+        className="relative w-72 h-72 cursor-pointer md:-mb-40 -mb-20"
         onClick={handleBoxClick}
       >
-        {/* Gift Box Container */}
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-64 h-56 drop-shadow-2xl">
           <Image
             src="/BoxImage/giftbox.png"
@@ -140,7 +130,6 @@ const Surprise = () => {
           />
         </div>
 
-        {/* Gift Box Lid */}
         <div 
           className={`absolute bottom-32 left-1/2 w-64 h-24 transform ${
             isOpen 
@@ -159,21 +148,19 @@ const Surprise = () => {
           />
         </div>
 
-        {/* GifCard Component */}
         <GifCard 
           isVisible={isOpen} 
           onClick={handleGifCardClick}
         />
       </div>
 
-      {/* GreetingCard Modal */}
       <GreetingCard
         isOpen={showGreetingModal}
         onClose={() => setShowGreetingModal(false)}
         receiverName={name}
       />
-      {/* Santa Sleigh */}
-<SantaSleigh isVisible={showSanta} />
+
+      <SantaSleigh isVisible={showSanta} />
     </div>
   );
 };
