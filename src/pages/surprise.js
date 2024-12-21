@@ -110,10 +110,10 @@ const Surprise = () => {
         {/* Snow hills with increased height */}
         <div className="relative w-full">
           {/* Back hill - tallest */}
-          <div className="absolute bottom-0 w-full h-[18rem] bg-gradient-to-t from-white to-white/90 md:rounded-[100%] rounded-none transform scale-110 translate-y-40" />
+          <div className="absolute bottom-0 w-full h-[20rem] bg-gradient-to-t from-white to-white/90 md:rounded-[100%] rounded-none transform scale-110 translate-y-40" />
           
           {/* Middle hill */}
-          <div className="absolute bottom-0 w-full h-[18rem] bg-gradient-to-t from-white to-white/95 md:rounded-[100%] rounded-none transform scale-105 translate-y-32" />
+          <div className="absolute bottom-0 w-full h-[20rem] bg-gradient-to-t from-white to-white/95 md:rounded-[100%] rounded-none transform scale-105 translate-y-32" />
           
           {/* Front hill - main snow ground */}
           <div className="absolute bottom-0 w-full h-80 bg-white md:rounded-[100%] rounded-none translate-y-24" />
