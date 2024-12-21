@@ -81,13 +81,13 @@
   }
 }
 
-/* Star twinkling animation */
+
 @keyframes twinkle {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.3; }
 }
 
-/* Snow animations */
+
 @keyframes snowfall-0 {
   from {
     transform: translateY(0) translateX(0);
@@ -164,7 +164,7 @@
 }
 
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
   @keyframes santa-flight {
     0% {

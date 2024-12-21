@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       keyframes: {
-        // Existing keyframes from your previous config
+        
         'fade-in': {
           '0%': { opacity: '0', transform: 'scale(0.9)' },
           '100%': { opacity: '1', transform: 'scale(1)' },
@@ -35,7 +35,7 @@ export default {
           '25%': { transform: 'translateX(-50%) rotate(-1deg)' },
           '75%': { transform: 'translateX(-50%) rotate(1deg)' },
         },
-        // New keyframes from the last config
+        
         'modal-appear': {
           '0%': { opacity: '0', transform: 'scale(0.9)' },
           '100%': { opacity: '1', transform: 'scale(1)' },
@@ -53,7 +53,7 @@ export default {
           '50%': { transform: 'translate(-50%, -100px) scale(0.95)', zIndex: '5' },
           '100%': { transform: 'translate(-50%, -20px) scale(1)', zIndex: '10' },
         },
-        // New keyframes from the added config
+        
         'fadeIn': {
           '0%': { opacity: '0', transform: 'translateY(10px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
@@ -64,14 +64,14 @@ export default {
         },
       },
       animation: {
-        // Existing animations from your previous config
+        
         'fade-in': 'fade-in 1s ease-out',
         'slide-up': 'slide-up 1s ease-out',
         'write': 'write 2s ease-in-out forwards',
         'writeLetters': 'writeLetters 1s ease-out',
         'shiftDown': 'shiftDown 0.5s ease-in-out',
         'shake': 'shake 1s ease-in-out infinite',
-        // New animations from the added config
+       
         'modal-appear': 'modal-appear 0.3s ease-out',
         'fade-in': 'fade-in 0.5s ease-out',
         'slide-up': 'slide-up 0.5s ease-out',

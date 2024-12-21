@@ -17,7 +17,6 @@ const SantaSleigh = ({ isVisible }) => {
         z-10
       `}
     >
-      {/* Ho Ho Ho Text */}
       {isVisible && (
         <div 
           className={`
@@ -37,7 +36,6 @@ const SantaSleigh = ({ isVisible }) => {
         </div>
       )}
 
-      {/* Magical Star Trail */}
       <div className="absolute right-0 top-1/2 w-full h-4">
         {[...Array(12)].map((_, i) => (
           <div
@@ -68,7 +66,6 @@ const SantaSleigh = ({ isVisible }) => {
         ))}
       </div>
 
-      {/* Sparkle Effects */}
       <div className="absolute inset-0">
         {[...Array(6)].map((_, i) => (
           <div
@@ -92,7 +89,6 @@ const SantaSleigh = ({ isVisible }) => {
         ))}
       </div>
 
-      {/* Santa Image */}
       <div className="relative w-full h-full">
         <Image
           src="/Santa/santa3.png"

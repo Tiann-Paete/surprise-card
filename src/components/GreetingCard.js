@@ -71,7 +71,6 @@ const GreetingCard = ({ isOpen, onClose, receiverName }) => {
           border: '1px solid rgba(255,255,255,0.2)'
         }}
       >
-        {/* Mobile Layout */}
         <div className="block md:hidden p-4 space-y-4 overflow-y-auto">
           <div className="relative w-full h-64 rounded-2xl bg-white overflow-hidden shadow-lg">
             <Image
@@ -108,7 +107,6 @@ const GreetingCard = ({ isOpen, onClose, receiverName }) => {
           </div>
         </div>
 
-        {/* Desktop Layout - Unchanged */}
         <div className="hidden md:flex flex-row h-full">
           <div className="w-1/2 p-6 flex items-center justify-center">
             <div className="relative w-full h-[400px] rounded-2xl overflow-hidden bg-white shadow-lg">
