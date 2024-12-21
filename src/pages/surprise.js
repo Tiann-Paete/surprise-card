@@ -101,13 +101,13 @@ const Surprise = () => {
       <div className="absolute bottom-0 w-full">
         <div className="relative w-full">
           {/* Back hill */}
-          <div className="absolute bottom-0 w-full bg-gradient-to-t from-white to-white/90 md:h-[20rem] h-[18rem] md:rounded-[30%] rounded-[20%] transform scale-110 md:translate-y-40 translate-y-20" />
+          <div className="absolute bottom-0 w-full bg-gradient-to-t from-white to-white/90 md:h-[20rem] h-[18rem] md:rounded-[20%] rounded-[20%] transform scale-110 md:translate-y-40 translate-y-20" />
           
           {/* Middle hill */}
           <div className="absolute bottom-0 w-full bg-gradient-to-t from-white to-white/95 md:h-[20rem] h-[16rem] md:rounded-[20%] rounded-[10%] transform scale-105 md:translate-y-32 translate-y-16" />
           
           {/* Front hill - main snow ground */}
-          <div className="absolute bottom-0 w-full md:h-96 h-48 bg-white md:rounded-[50%] rounded-[30%] md:translate-y-24 translate-y-12" />
+          <div className="absolute bottom-0 w-full md:h-96 h-48 bg-white md:rounded-[20%] rounded-[30%] md:translate-y-24 translate-y-12" />
           
           {/* Snow texture overlay */}
           <div className="absolute bottom-0 w-full md:h-96 h-48 bg-gradient-to-b from-transparent to-blue-100/20 md:translate-y-24 translate-y-12" />
