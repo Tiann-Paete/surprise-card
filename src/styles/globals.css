@@ -1,0 +1,333 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap');
+
+
+
+@keyframes popup {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  70% {
+    transform: scale(1.05);
+  }
+  85% {
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes treePopup {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.4);
+  }
+  80% {
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(-50%) rotate(0deg); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-52%) rotate(-2deg); }
+  20%, 40%, 60%, 80% { transform: translateX(-48%) rotate(2deg); }
+}
+
+@keyframes slideUp {
+  0% { transform: translateY(100%) translateX(-50%); }
+  100% { transform: translateY(0) translateX(-50%); }
+}
+
+@keyframes writeLetters {
+  0% { clip-path: inset(0 100% 0 0); }
+  100% { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg) translate(-50%, 0);
+  }
+  100% {
+    transform: rotate(206deg) translate(-50%, -80px);
+  }
+}
+
+/* Star twinkling animation */
+@keyframes twinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* Snow animations */
+@keyframes snowfall-0 {
+  from {
+    transform: translateY(0) translateX(0);
+  }
+  to {
+    transform: translateY(160vh) translateX(20px);
+  }
+}
+
+@keyframes snowfall-1 {
+  from {
+    transform: translateY(0) translateX(0);
+  }
+  to {
+    transform: translateY(160vh) translateX(-20px);
+  }
+}
+
+@keyframes snowfall-2 {
+  from {
+    transform: translateY(0) translateX(0);
+  }
+  to {
+    transform: translateY(180vh) translateX(0);
+  }
+}
+
+@keyframes snowfall-3 {
+  from {
+    transform: translateY(0) translateX(0);
+  }
+  to {
+    transform: translateY(180vh) translateX(0);
+  }
+}
+
+@keyframes writeLetters {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes santa-flight {
+  0% {
+    transform: translate(100vw, 20vh) rotate(25deg);
+  }
+  100% {
+    transform: translate(-100vw, 10vh) rotate(-25deg);
+  }
+}
+
+@keyframes hohoho-fade {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  @keyframes santa-flight {
+    0% {
+      transform: translate(100vw, 15vh) rotate(25deg) scale(0.7);
+    }
+    100% {
+      transform: translate(-100vw, 6vh) rotate(-20deg) scale(0.7);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  @keyframes santa-flight {
+    0% {
+      transform: translate(100vw, 12vh) rotate(25deg) scale(0.5);
+    }
+    100% {
+      transform: translate(-100vw, 11vh) rotate(-25deg) scale(0.5);
+    }
+  }
+}
+
+
+@keyframes star-trail {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+@keyframes card-sequence {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  20%, 25% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  35% {
+    transform: translateY(-15px);
+  }
+  45%, 65% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-7px);
+  }
+  85%, 100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-card-sequence {
+  animation: card-sequence 2.5s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
+}
+
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+.delay-1000 {
+  animation-delay: 1000ms;
+}
+
+.animate-twinkle {
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+.animate-snowfall-0 {
+  animation: snowfall-0 9s linear infinite;
+}
+
+.animate-snowfall-1 {
+  animation: snowfall-1 13s linear infinite;
+}
+
+.animate-snowfall-2 {
+  animation: snowfall-2 7s linear infinite;
+}
+
+.animate-snowfall-3 {
+  animation: snowfall-2 13s linear infinite;
+}
+
+.animate-slide-up {
+  animation: slideUp 1s ease-out forwards;
+}
+
+.animate-writeLetters {
+  animation: writeLetters 2s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 2s ease-out forwards;
+}
+
+.animate-shake {
+  animation: shake 0.8s ease-in-out;
+}
+
+.rotating {
+  animation: 1s rotating forwards;
+}
+
+.rotated {
+  transform: rotate(150deg) translate(-60%, -100px);
+}
+.animate-popup {
+  animation: popup 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-reveal {
+  opacity: 0;
+  animation: reveal 0.8s ease forwards;
+}
+
+.animate-tree-popup {
+  animation: treePopup 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation-delay: 0.3s;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+.delay-1000 {
+  animation-delay: 1000ms;
+}
+
+.animate-santa-flight {
+  animation: santa-flight 9s linear forwards;
+}
+
+.animate-star-trail {
+  animation: star-trail 1.5s ease-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.animate-hohoho {
+  animation: hohoho-fade 2s linear forwards;
+  animation-delay: 6s;
+}
