@@ -60,7 +60,6 @@ const animalMessages = {
   ]
 };
 
-// Custom messages for specific names
 const customMessages = {
   'aizel': ["This lovely cat reminds me of your curiosity and cuteness"],
   'janna': ["Like this adorable bunny, you have that active and sweet personality"],
@@ -89,7 +88,6 @@ const gifPairs = [
   { card: '/GifCard/penguin.gif', greeting: '/GreetingGif/penguin1.gif', animalName: 'Penguin' }
 ];
 
-// Name to animal mapping
 const nameToAnimal = {
   'aizel': 'Cat',
   'janna': 'Bunny',
@@ -112,16 +110,13 @@ export function GifProvider({ children }) {
       return selectedGifs.get(name);
     }
 
-    // Check if there's a specific animal mapping for this name
     const lowercaseName = name.toLowerCase();
     let gifPair;
     let message;
 
     if (nameToAnimal[lowercaseName]) {
-      // Find the gif pair for the mapped animal
       gifPair = gifPairs.find(pair => pair.animalName === nameToAnimal[lowercaseName]);
       
-      // Get custom message if it exists, otherwise use default animal messages
       if (customMessages[lowercaseName]) {
         const messages = customMessages[lowercaseName];
         message = messages[Math.floor(Math.random() * messages.length)];
@@ -130,7 +125,6 @@ export function GifProvider({ children }) {
         message = messages[Math.floor(Math.random() * messages.length)];
       }
     } else {
-      // Use the original random selection for names without specific mapping
       const nameSum = name.split('').reduce((sum, char) => sum + char.charCodeAt(0), 0);
       const randomIndex = nameSum % gifPairs.length;
       gifPair = gifPairs[randomIndex];
