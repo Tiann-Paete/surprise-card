@@ -24,7 +24,7 @@ export default function Home() {
               🎄 Christmas Surprise
             </h1>
             <p className="text-gray-600">
-              I have a little surprise waiting for you! But first, could you tell me your name?
+              I have a little surprise waiting for you! But first, could you tell me your firstname?
             </p>
           </div>
 
